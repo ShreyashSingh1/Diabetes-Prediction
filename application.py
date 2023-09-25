@@ -9,7 +9,7 @@ model = pickle.load(open("Model/modelForPrediction.pkl", "rb"))
 ## Route for homepage
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('home.html')
 
 ## Route for Single data point prediction
 @app.route('/predictdata', methods=['GET', 'POST'])
@@ -36,7 +36,7 @@ def predict_datapoint():
         else:
             result ='Non-Diabetic'
             
-        return render_template('single_prediction.html', result=result)
+        return render_template('home.html', result=result)
 
     else:
         return render_template('home.html')
