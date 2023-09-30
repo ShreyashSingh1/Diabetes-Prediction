@@ -34,7 +34,7 @@ def predict_datapoint():
         if predict[0] == 1:
             result = 'Diabetic'
         else:
-            result ='Non-Diabetic'
+            result = 'Non-Diabetic'
             
         return render_template('home.html', result=result)
 
